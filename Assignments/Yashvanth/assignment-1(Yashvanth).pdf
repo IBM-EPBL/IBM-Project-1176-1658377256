@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js">
+                                             
+</head>
+<style>
+    body{
+        background:linear-gradient(to right,#c9522d,#f64c72);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+.form-control, .form-control:focus ,.input-group-addon{
+border-color:  aliceblue;
+border-radius: 0;
+}
+.signup{
+    width: 360px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.signup h2{
+    color: #fd614d;
+    text-align: center;
+    margin: 0 0 20px;
+}
+.signup form{
+   border-radius: 1px;
+   margin-bottom: 15px;
+
+   background-color: rgba(0,0,0,0.7) !important;
+   border: 1px solid none;
+   box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+   padding: 30px;
+  
+}
+.signup .form-group{
+    margin-bottom: 30px;
+}
+.signup .form-control{
+    min-height: 38px;
+	box-shadow: none !important;
+	border-width: 0 0 1px 0;
+}
+.form-control{
+    background-color: transparent;
+    color: #fd614d;
+}
+.form-control:hover {
+    background-color: transparent;
+    color: aliceblue;
+    overflow: hidden;
+    text-decoration: none;
+}
+.signup .input-group-addon{
+    max-width: 42px;
+    text-align: center;
+    background: none;
+    border-bottom: 1px solid aliceblue;
+    padding-left: 5px;
+}
+.input-group-addon{
+    font-size: 30px;
+}
+
+
+.btn{
+    background: linear-gradient(259deg,#f64,#f64c72);
+	border: none;
+    text-align: center;
+	padding: 3%s;
+    font-size: 16px;
+    font-weight: bold;
+	color: aliceblue;
+}
+.btn:hover{
+	background: aliceblue;
+border: none;
+color: aliceblue;
+color: #fd614d;
+}
+
+
+
+ .fa{
+    color:  aliceblue;
+}
+
+.signup .fa-envelope{
+    font-size: 23px;
+    color: aliceblue;
+}
+
+a{
+	color: aliceblue;
+	text-decoration: none;
+}
+
+a:hover{
+	color:#664a71;
+	text-decoration: none;
+}
+
+
+
+
+</style>
+    <body>
+        
+        <div class="signup">
+            <form>
+            <h2>REGISERATION</h2>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" name="username"  class=" form-control"placeholder="username" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    <input type="email" name="email"  class=" form-control"placeholder="Email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                    <input type="text" name="phone"  class=" form-control"placeholder="Phonenumber" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-building"></i></i></span>
+                    <input type="text" name="city"  class=" form-control"placeholder="City" required>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-map"></i></span>
+                    <input type="text" name="State"  class=" form-control"placeholder="State" required>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-flag"></i></span>
+                    <input type="text" name="Country"  class=" form-control"placeholder="Country" required>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">REG</button>
+            </div>
+            
+        </form>
+        </div>
+    
+    </body>
+</html>
