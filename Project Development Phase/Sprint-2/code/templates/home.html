@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Product</title>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+        <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css"/>
+        <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="{{url_for('static',filename='styles/home.css')}}">
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+h1,h2,h3{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+</style>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="/logout">LOG OUT</a>
+    <div class="title">
+        <h3  style="right:0;font-family:'Lobster', cursive; color: #fff;margin: 1%;">InfiniteArt</h3>
+      </div>
+  </div>
+  <div class="co">
+    <div class="w3-content w3-section" style="max-width:100%;;">
+        <img class="mySlides" src="{{url_for('static',filename='figma/slider_1.jpg')}}" style="width:100%">
+        <img class="mySlides" src="{{url_for('static',filename='figma/silder_2.jpg')}}" style="width:100%">
+        <img class="mySlides" src="{{url_for('static',filename='figma/silder_3.jpg')}}" style="width:100%">
+        </div>
+  </div>
+ 
+<h2>TRENDING SHIRTS</h2>
+<div class="splide" style="padding: 0;margin:0">
+    <div class="splide__track">
+        <ul class="splide__list">
+          {% for item in dictionary %}
+          <li class="splide__slide">
+            <div class="container">
+                <div class="card">
+                 
+                    <div class="image">
+                        <img src="{{item.IMAGE}}">
+
+                    </div>
+                   
+                    <div class="descrpton">
+                        
+                        <h2>{{item.NAME}}</h2>
+                        
+                        <div class="size">
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <h3>&#8360;{{item.RATE}}</h3>
+                        <div class="color">
+                            <h3>Color: </h3>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#">Buy now</a>
+                    </div>
+                    
+                    
+                    </div>
+            </div>
+            </li>
+            {% endfor %}
+            <!-- pant -->
+        </ul> 
+    </div>
+</div>
+<H2>TRENDING PANTS</H2>
+<div id="pant"  class="splide"  style="margin:0;background: #131313;" >
+    <div class="splide__track">
+        <ul class="splide__list">
+          {% for item in pants %}
+          <li class="splide__slide">
+            <div class="container">
+                <div class="card">
+                 
+                    <div class="image">
+                        <img src="{{item.IMAGE}}">
+
+                    </div>
+                   
+                    <div class="descrpton">
+                        
+                        <h2>{{item.NAME}}</h2>
+                        
+                        <div class="size">
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <h3>&#8360;{{item.RATE}}</h3>
+                        <div class="color">
+                            <h3>Color: </h3>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#">Buy now</a>
+                    </div>
+                    </div>
+            </div>
+            </li>
+            {% endfor %}
+            <!-- pant -->
+            </ul>
+            </div>
+</div>
+<h2>TRENDING WATCHES</h2>
+<div id="watch"  class="splide" style="padding: 0;margin:0;background: #131313;" >
+        <div class="splide__track">
+            <ul class="splide__list">
+              {% for item in watchs %}
+              <li class="splide__slide">
+                <div class="container">
+                    <div class="card">
+                     
+                        <div class="image">
+                            <img src="{{item.IMAGE}}">
+    
+                        </div>
+                       
+                        <div class="descrpton">
+                            
+                            <h2>{{item.NAME}}</h2>
+                            
+                            <div class="size">
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <h3>&#8360;{{item.RATE}}</h3>
+                            <div class="color">
+                                <h3>Color: </h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="#">Buy now</a>
+                        </div>
+                        </div>
+                </div>
+                </li>
+                {% endfor %}
+                <!-- pant -->
+                </ul>
+                </div>
+</div>
+<h2>TRENDING RINGS</h2>
+ <div id="ring"  class="splide" style="padding: 0;margin:0;background: #131313;"  >
+                  <div class="splide__track">
+                      <ul class="splide__list">
+                        {% for item in rings %}
+                        <li class="splide__slide">
+                          <div class="container">
+                              <div class="card">
+                               
+                                  <div class="image">
+                                      <img src="{{item.IMAGE}}">
+              
+                                  </div>
+                                 
+                                  <div class="descrpton">
+                                      
+                                      <h2>{{item.NAME}}</h2>
+                                      
+                                      <div class="size">
+                                          <span>7</span>
+                                          <span>8</span>
+                                          <span>9</span>
+                                          <span>10</span>
+                                      </div>
+                                      <h3>{{item.RATE}}</h3>
+                                      <div class="color">
+                                          <h3>Color: </h3>
+                                          <span></span>
+                                          <span></span>
+                                          <span></span>
+                                      </div>
+                                      <a href="#">Buy now</a>
+                                  </div>
+                                  </div>
+                          </div>
+                          </li>
+                          {% endfor %}
+                          <!-- pant -->
+                          </ul>
+                          </div>
+</div>              
+<script>
+var splide = new Splide( '.splide', {
+type    : 'loop',
+perPage : 4,
+autoplay: true,
+} );
+
+splide.mount();
+
+
+document.addEventListener('DOMContentLoaded', function () {
+new Splide('#pant', {
+perPage: 4,
+perMove: 1,
+gap: "30px",
+pagination: false,
+}).mount();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+new Splide('#watch', {
+perPage: 4,
+perMove: 1,
+gap: "30px",
+pagination: false,
+}).mount();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+new Splide('#ring', {
+perPage: 4,
+perMove: 1,
+gap: "30px",
+pagination: false,
+}).mount();
+});
+
+</script>
+
+<script>
+var splid = new Splide( '.splid', {
+type    : 'loop',
+perPage : 4,
+autoplay: true,
+} );
+splid.mount();
+</script>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+var i;
+var x = document.getElementsByClassName("mySlides");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";  
+}
+myIndex++;
+if (myIndex > x.length) {myIndex = 1}    
+x[myIndex-1].style.display = "block";  
+setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
