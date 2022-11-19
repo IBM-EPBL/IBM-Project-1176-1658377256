@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table> 
+        <thead> 
+        <tr> 
+            <th>ID</th> 
+            <th>Name</th> 
+        </tr> 
+        </thead> 
+        <tbody> 
+            {% for items in dictionary %}
+                <tr> 
+                    <td>{{dictionary.NAME}}</td>
+                {% endfor %}
+            </tr>
+                 
+                 
+           
+        </tbody> 
+    </table> 
+    
+</body>
+</html>
+
+<!-- 
+      <div class="splide">
+    <div class="splide__track">
+        <ul class="splide__list">
+          {% for item in dictionary %}
+          <li class="splide__slide">
+            <div class="container">
+                <div class="card">
+                 
+                    <div class="image">
+                        <img src="#">
+
+                    </div>
+                   
+                    <div class="descrpton">
+                        
+                        <h2>{{item.NAME}}</h2>
+                        
+                        <div class="size">
+                            <span>7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                        </div>
+                        <h3>{{item.CATEGORIE}}</h3>
+                        <div class="color">
+                            <h3>Color: </h3>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#">Buy now</a>
+                    </div>
+                    
+                    
+                    </div>
+            </div>
+            </li>
+            {% endfor %}
+            <!-- pant -->
+        </ul>
+
+
+            
+    </div>
+    </div>
+
+    <div id="pant"  class="splide" >
+        <div class="splide__track">
+            <ul class="splide__list">
+              {% for item in pants %}
+              <li class="splide__slide">
+                <div class="container">
+                    <div class="card">
+                     
+                        <div class="image">
+                            <img src="#">
+    
+                        </div>
+                       
+                        <div class="descrpton">
+                            
+                            <h2>{{item.NAME}}</h2>
+                            
+                            <div class="size">
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <h3>{{item.CATEGORIE}}</h3>
+                            <div class="color">
+                                <h3>Color: </h3>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <a href="#">Buy now</a>
+                        </div>
+                        </div>
+                </div>
+                </li>
+                {% endfor %}
+                <!-- pant -->
+                </ul>
+                </div>
+                </div>
+               
+<script>
+var splide = new Splide( '.splide', {
+type    : 'loop',
+perPage : 4,
+autoplay: true,
+} );
+
+splide.mount();
+
+
+document.addEventListener('DOMContentLoaded', function () {
+new Splide('#pant', {
+perPage: 4,
+perMove: 1,
+gap: "30px",
+pagination: false,
+}).mount();
+});
+document.addEventListener('DOMContentLoaded', function () {
+new Splide('#watch', {
+perPage: 4,
+perMove: 1,
+gap: "30px",
+pagination: false,
+}).mount();
+});
+</script>
+
+<script>
+var splid = new Splide( '.splid', {
+type    : 'loop',
+perPage : 4,
+autoplay: true,
+} );
+splid.mount();
+</script>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+var i;
+var x = document.getElementsByClassName("mySlides");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";  
+}
+myIndex++;
+if (myIndex > x.length) {myIndex = 1}    
+x[myIndex-1].style.display = "block";  
+setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+ -->
